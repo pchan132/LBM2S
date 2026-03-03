@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOLAR ROOFTOP - ติดตั้งโซล่าเซลล์ LBM2S</title>
+
+    <!-- Google Fonts: Kanit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Kanit', 'sans-serif'],
+                    },
+                    colors: {
+                        'lbm-blue': '#162b53',
+                        'lbm-yellow': '#fdb913',
+                        'pkg-3kw': '#283c63',
+                        'pkg-5kw1': '#00a651',
+                        'pkg-5kw3': '#3cb878',
+                        'pkg-10kw': '#ed1c24',
+                        'pkg-15kw': '#00aeef',
+                        'pkg-20kw': '#29aae1',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Styles & Shapes */
+        body {
+            background-color: #f8fafc;
+        }
+
+        /* Hero Background with Slanted Shape */
+        .hero-bg {
+            background: linear-gradient(135deg, #0f1c3a 0%, #1c366a 100%);
+            position: relative;
+            overflow: hidden;
+            border-bottom: 8px solid #fdb913;
+        }
+
+        /* Ribbon Shape for Table Headers */
+        .ribbon-header {
+            clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 50% 100%, 0% 85%);
+            padding-bottom: 1.5rem;
+        }
+
+        /* Table custom styling */
+        .specs-table th,
+        .specs-table td {
+            min-width: 120px;
+        }
+
+        .specs-table tbody tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+
+        .specs-table tbody tr:hover {
+            background-color: #f1f5f9;
+        }
+
+        /* Special Offer Badge Animation */
+        .offer-badge {
+            animation: pulse-border 2s infinite;
+        }
+
+        @keyframes pulse-border {
+            0% {
+                box-shadow: 0 0 0 0 rgba(237, 28, 36, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 10px rgba(237, 28, 36, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(237, 28, 36, 0);
+            }
+        }
+
+        /* Appliance list styling */
+        .appliance-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.85rem;
+            color: #4b5563;
+        }
+
+        .badge-count {
+            background-color: #1f2937;
+            color: white;
+            border-radius: 9999px;
+            padding: 0.1rem 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body class="antialiased text-gray-800">
+
+    <!-- HERO SECTION -->
+    <header class="hero-bg text-white pb-12 pt-8 lg:pt-16 lg:pb-24 relative z-0">
+        <!-- Abstract background pattern placeholder (Optional) -->
+        <div
+            class="absolute inset-0 opacity-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-blue-100 via-transparent to-transparent pointer-events-none">
+        </div>
+
+        <div class="container mx-auto px-4 relative z-10 flex flex-col lg:flex-row items-center gap-8">
+
+            <!-- Left Content: Text & Features -->
+            <div class="w-full lg:w-3/5">
+                <div class="flex items-center gap-4 mb-4">
+                    <!-- Logo Placeholder (Using Text/Icon for now) -->
+                    <div
+                        class="bg-white text-lbm-blue font-bold rounded-full w-16 h-16 flex items-center justify-center text-xl shadow-lg border-2 border-lbm-yellow">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h2 class="text-xl lg:text-2xl font-semibold tracking-widest text-gray-300">LBM2S</h2>
+                </div>
+
+                <h1 class="text-5xl lg:text-7xl font-extrabold tracking-tight mb-2 drop-shadow-lg">
+                    SOLAR ROOFTOP
+                </h1>
+                <h2 class="text-4xl lg:text-6xl font-extrabold text-lbm-yellow mb-4 drop-shadow-md">
+                    ติดตั้งโซล่าเซลล์
+                </h2>
+                <h3 class="text-xl lg:text-2xl font-medium mb-6 leading-relaxed">
+                    งานติดตั้ง SOLAR ลดค่าไฟ มั่นใจ !!!<br>
+                    <span class="font-light text-gray-300">กับ Lopburi Metaverse 2 & Supply</span>
+                </h3>
+
+                <!-- Feature List -->
+                <ul class="space-y-3 text-lg font-light mb-8">
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-circle-check text-lbm-yellow mt-1 text-xl"></i>
+                        <span>เป็นผู้เชี่ยวชาญงานด้านเทคโนโลยี</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-circle-check text-lbm-yellow mt-1 text-xl"></i>
+                        <span>ดำเนินการติดตั้งโดยทีมงานผู้เชี่ยวชาญโดยตรง</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-circle-check text-lbm-yellow mt-1 text-xl"></i>
+                        <span>อินเวอร์เตอร์มาตรฐานรับรองจากการไฟฟ้า</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-circle-check text-lbm-yellow mt-1 text-xl"></i>
+                        <span>ดูออนไลน์การทำงานของระบบแบบเรียลไทม์</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-circle-check text-lbm-yellow mt-1 text-xl"></i>
+                        <span class="font-bold text-white">สำรวจ และออกแบบ ฟรี!!</span>
+                    </li>
+                </ul>
+
+                <!-- Promo Box -->
+                <div
+                    class="bg-white text-gray-800 rounded-xl p-6 shadow-2xl relative inline-block offer-badge border-l-8 border-red-600 max-w-lg w-full">
+                    <div
+                        class="absolute -top-6 -left-6 bg-red-600 text-white text-xl font-extrabold px-4 py-2 transform -rotate-12 rounded shadow-lg border-2 border-yellow-400">
+                        SPECIAL<br>OFFER!
+                    </div>
+                    <div class="pl-16">
+                        <h4 class="text-red-600 font-extrabold text-2xl mb-2 flex items-center gap-2">
+                            FREE กล้องวงจรปิด <span
+                                class="bg-lbm-blue text-white rounded-full w-10 h-10 flex items-center justify-center text-lg">4</span>
+                            ตัว
+                        </h4>
+
+                        <div class="flex flex-col sm:flex-row gap-4 mb-3">
+                            <ul class="text-sm font-medium space-y-1 flex-1">
+                                <li><i class="fa-solid fa-video text-gray-400 mr-1"></i> CCTV 4 ตัว (PoE)</li>
+                                <li><i class="fa-solid fa-server text-gray-400 mr-1"></i> NVR 8 Chanel</li>
+                                <li><i class="fa-solid fa-hard-drive text-gray-400 mr-1"></i> HDD 2 TB</li>
+                            </ul>
+                            <!-- Graphic Icons representation -->
+                            <div class="flex gap-2 items-center text-3xl text-gray-600">
+                                <i class="fa-solid fa-camera"></i>
+                                <i class="fa-solid fa-camera"></i>
+                                <i class="fa-solid fa-hard-drive"></i>
+                            </div>
+                        </div>
+                        <p class="text-red-500 text-xs font-bold">** เฉพาะ 10 kW ขึ้นไป</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Content: Image Placeholder -->
+            <div class="w-full lg:w-2/5 hidden lg:flex justify-center relative">
+                <div
+                    class="relative w-full aspect-[4/3] bg-white/10 rounded-2xl border-4 border-white/20 flex flex-col items-center justify-center backdrop-blur-sm overflow-hidden">
+                    <i class="fa-solid fa-solar-panel text-8xl text-lbm-yellow mb-4 drop-shadow-lg"></i>
+                    <p class="text-xl font-medium"></p>
+                    <p class="text-sm text-gray-300 mt-2">Replace with actual image</p>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <!-- PRICING / SPECS TABLE SECTION -->
+    <section class="py-16 bg-white relative z-10 -mt-8 rounded-t-3xl shadow-[0_-10px_40px_rgba(0,0,0,0.1)]">
+        <div class="container mx-auto px-4">
+
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold text-lbm-blue">เปรียบเทียบขนาดติดตั้ง SOLAR ROOFTOP</h2>
+                <p class="text-gray-500 mt-2">เลือกแพ็กเกจที่เหมาะสมกับการใช้งานของคุณ</p>
+            </div>
+
+            <div class="overflow-x-auto pb-8">
+                <table class="w-full text-center border-collapse specs-table">
+                    <thead>
+                        <tr>
+                            <th class="p-4 align-bottom w-48">
+                                <div class="flex flex-col items-center justify-end h-full">
+                                    <img src="https://cdn-icons-png.flaticon.com/512/3256/3256126.png" alt="House Solar"
+                                        class="w-16 h-16 opacity-80 mb-2">
+                                </div>
+                            </th>
+                            <th class="p-2 align-top">
+                                <div
+                                    class="bg-pkg-3kw text-white pt-4 px-2 ribbon-header h-28 flex flex-col items-center">
+                                    <span class="text-sm font-light">ขนาดติดตั้ง</span>
+                                    <span class="text-3xl font-bold">3 kW</span>
+                                </div>
+                            </th>
+                            <th class="p-2 align-top">
+                                <div
+                                    class="bg-pkg-5kw1 text-white pt-4 px-2 ribbon-header h-28 flex flex-col items-center">
+                                    <span class="text-sm font-light">ขนาดติดตั้ง</span>
+                                    <span class="text-3xl font-bold">5 kW</span>
+                                </div>
+                            </th>
+                            <th class="p-2 align-top">
+                                <div
+                                    class="bg-pkg-5kw3 text-white pt-4 px-2 ribbon-header h-28 flex flex-col items-center">
+                                    <span class="text-sm font-light">ขนาดติดตั้ง</span>
+                                    <span class="text-3xl font-bold">5 kW</span>
+                                </div>
+                            </th>
+                            <th class="p-2 align-top">
+                                <div
+                                    class="bg-pkg-10kw text-white pt-4 px-2 ribbon-header h-28 flex flex-col items-center">
+                                    <span class="text-sm font-light">ขนาดติดตั้ง</span>
+                                    <span class="text-3xl font-bold">10 kW</span>
+                                </div>
+                            </th>
+                            <th class="p-2 align-top">
+                                <div
+                                    class="bg-pkg-15kw text-white pt-4 px-2 ribbon-header h-28 flex flex-col items-center">
+                                    <span class="text-sm font-light">ขนาดติดตั้ง</span>
+                                    <span class="text-3xl font-bold">15 kW</span>
+                                </div>
+                            </th>
+                            <th class="p-2 align-top">
+                                <div
+                                    class="bg-pkg-20kw text-white pt-4 px-2 ribbon-header h-28 flex flex-col items-center">
+                                    <span class="text-sm font-light">ขนาดติดตั้ง</span>
+                                    <span class="text-3xl font-bold">20 kW</span>
+                                </div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-700">
+                        <!-- ระบบไฟฟ้า -->
+                        <tr class="border-b border-gray-100">
+                            <td class="p-4 text-left font-semibold flex items-center gap-2">
+                                <div
+                                    class="w-6 h-6 rounded-full bg-green-500 text-white flex items-center justify-center text-xs">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                ระบบไฟฟ้า
+                            </td>
+                            <td class="p-4 font-medium">1 เฟส</td>
+                            <td class="p-4 font-medium">1 เฟส</td>
+                            <td class="p-4 font-medium">3 เฟส</td>
+                            <td class="p-4 font-medium">3 เฟส</td>
+                            <td class="p-4 font-medium">3 เฟส</td>
+                            <td class="p-4 font-medium">3 เฟส</td>
+                        </tr>
+
+                        <!-- พื้นที่ติดตั้ง -->
+                        <tr class="border-b border-gray-100">
+                            <td class="p-4 text-left font-semibold flex items-center gap-2">
+                                <div
+                                    class="w-6 h-6 rounded-full bg-green-500 text-white flex items-center justify-center text-xs">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div>พื้นที่ติดตั้ง<br><span
+                                        class="text-xs text-gray-400 font-normal">(ตารางเมตร)</span></div>
+                            </td>
+                            <td class="p-4 text-lg font-bold">18</td>
+                            <td class="p-4 text-lg font-bold">30</td>
+                            <td class="p-4 text-lg font-bold">30</td>
+                            <td class="p-4 text-lg font-bold">60</td>
+                            <td class="p-4 text-lg font-bold">90</td>
+                            <td class="p-4 text-lg font-bold">120</td>
+                        </tr>
+
+                        <!-- พื้นที่ผลิตไฟ -->
+                        <tr class="border-b border-gray-100">
+                            <td class="p-4 text-left font-semibold flex items-center gap-2">
+                                <div
+                                    class="w-6 h-6 rounded-full bg-green-500 text-white flex items-center justify-center text-xs">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div>ผลิตไฟได้<br><span class="text-xs text-gray-400 font-normal">(หน่วย/ปี)</span>
+                                </div>
+                            </td>
+                            <td class="p-4 text-lg font-bold">3,510</td>
+                            <td class="p-4 text-lg font-bold">5,840</td>
+                            <td class="p-4 text-lg font-bold">5,840</td>
+                            <td class="p-4 text-lg font-bold">11,680</td>
+                            <td class="p-4 text-lg font-bold">17,520</td>
+                            <td class="p-4 text-lg font-bold">23,360</td>
+                        </tr>
+
+                        <!-- อุปกรณ์ไฟฟ้า -->
+                        <tr class="border-b border-gray-100">
+                            <td class="p-4 text-left font-semibold align-top pt-6 flex items-start gap-2">
+                                <div
+                                    class="w-6 h-6 rounded-full bg-green-500 text-white flex items-center justify-center text-xs mt-1">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div>จำนวน<br>อุปกรณ์ไฟฟ้า<br><span
+                                        class="text-sm text-gray-500 font-normal">ที่จ่ายไฟได้</span></div>
+                            </td>
+                            <!-- 3kW -->
+                            <td class="p-4 align-top">
+                                <div class="appliance-item"><i class="fa-regular fa-lightbulb text-xl w-6"></i> <span
+                                        class="badge-count">x15</span></div>
+                                <div class="text-[0.65rem] text-gray-400 mb-2">หลอดไฟ 18 W</div>
+
+                                <div class="appliance-item"><i class="fa-solid fa-tv text-xl w-6"></i> <span
+                                        class="badge-count bg-pkg-3kw">x1</span></div>
+                                <div class="text-[0.65rem] text-gray-400 mb-2">TV LED 55 นิ้ว</div>
+
+                                <div class="appliance-item"><i class="fa-solid fa-box text-xl w-6"></i> <span
+                                        class="badge-count bg-pkg-3kw">x1</span></div>
+                                <div class="text-[0.65rem] text-gray-400 mb-2">ตู้เย็น 15 คิว</div>
+
+                                <div class="appliance-item"><i class="fa-solid fa-snowflake text-xl w-6"></i> <span
+                                        class="badge-count bg-pkg-3kw">x1</span></div>
+                                <div class="text-[0.65rem] text-gray-400">แอร์ 12,000 BTU</div>
+                            </td>
+                            <!-- 5kW (1) -->
+                            <td class="p-4 align-top">
+                                <div class="appliance-item"><i class="fa-regular fa-lightbulb text-xl w-6"></i> <span
+                                        class="badge-count">x20</span></div>
+                                <div class="text-[0.65rem] text-gray-400 mb-2">หลอดไฟ 18 W</div>
+
+                                <div class="appliance-item"><i class="fa-solid fa-tv text-xl w-6"></i> <span
+                                        class="badge-count bg-pkg-5kw1">x4</span></div>
+                                <div class="text-[0.65rem] text-gray-400 mb-2">TV LED 55 นิ้ว</div>
+
+                                <div class="appliance-item"><i class="fa-solid fa-box text-xl w-6"></i> <span
+                                        class="badge-count bg-pkg-5kw1">x1</span></div>
+                                <div class="text-[0.65rem] text-gray-400 mb-2">ตู้เย็น 15 คิว</div>
+
+                                <div class="appliance-item"><i class="fa-solid fa-snowflake text-xl w-6"></i> <span
+                                        class="badge-count bg-pkg-5kw1">x2</span></div>
+                                <div class="text-[0.65rem] text-gray-400">แอร์ 12,000 BTU</div>
+                            </td>
+                            <!-- 5kW (3) -->
+                            <td class="p-4 align-top">
+                                <div class="appliance-item"><i class="fa-regular fa-lightbulb text-xl w-6"></i> <span
+                                        class="badge-count">x20</span></div>
+                                <div class="text-[0.65rem] text-gray-400 mb-2">หลอดไฟ 18 W</div>
+
+                                <div class="appliance-item"><i class="fa-solid fa-tv text-xl w-6"></i> <span
+                                        class="badge-count bg-pkg-5kw3">x4</span></div>
+                                <div class="text-[0.65rem] text-gray-400 mb-2">TV LED 55 นิ้ว</div>
+
+                                <div class="appliance-item"><i class="fa-solid fa-box text-xl w-6"></i> <span
+                                        class="badge-count bg-pkg-5kw3">x1</span></div>
+                                <div class="text-[0.65rem] text-gray-400 mb-2">ตู้เย็น 15 คิว</div>
+
+                                <div class="appliance-item"><i class="fa-solid fa-snowflake text-xl w-6"></i> <span
+                                        class="badge-count bg-pkg-5kw3">x2</span></div>
+                                <div class="text-[0.65rem] text-gray-400">แอร์ 12,000 BTU</div>
+                            </td>
+                            <!-- 10kW -->
+                            <td class="p-4 align-top">
+                                <div class="appliance-item"><i class="fa-regular fa-lightbulb text-xl w-6"></i> <span
+                                        class="badge-count">x25</span></div>
+                                <div class="text-[0.65rem] text-gray-400 mb-2">หลอดไฟ 18 W</div>
+
+                                <div class="appliance-item"><i class="fa-solid fa-tv text-xl w-6"></i> <span
+                                        class="badge-count bg-pkg-10kw">x8</span></div>
+                                <div class="text-[0.65rem] text-gray-400 mb-2">TV LED 55 นิ้ว</div>
+
+                                <div class="appliance-item"><i class="fa-solid fa-box text-xl w-6"></i> <span
+                                        class="badge-count bg-pkg-10kw">x3</span></div>
+                                <div class="text-[0.65rem] text-gray-400 mb-2">ตู้เย็น 15 คิว</div>
+
+                                <div class="appliance-item"><i class="fa-solid fa-snowflake text-xl w-6"></i> <span
+                                        class="badge-count bg-pkg-10kw">x3</span></div>
+                                <div class="text-[0.65rem] text-gray-400">แอร์ 12,000 BTU</div>
+                            </td>
+                            <!-- 15kW -->
+                            <td class="p-4 align-top">
+                                <div class="appliance-item"><i class="fa-regular fa-lightbulb text-xl w-6"></i> <span
+                                        class="badge-count">x35</span></div>
+                                <div class="text-[0.65rem] text-gray-400 mb-2">หลอดไฟ 18 W</div>
+
+                                <div class="appliance-item"><i class="fa-solid fa-tv text-xl w-6"></i> <span
+                                        class="badge-count bg-pkg-15kw">x10</span></div>
+                                <div class="text-[0.65rem] text-gray-400 mb-2">TV LED 55 นิ้ว</div>
+
+                                <div class="appliance-item"><i class="fa-solid fa-box text-xl w-6"></i> <span
+                                        class="badge-count bg-pkg-15kw">x5</span></div>
+                                <div class="text-[0.65rem] text-gray-400 mb-2">ตู้เย็น 15 คิว</div>
+
+                                <div class="appliance-item"><i class="fa-solid fa-snowflake text-xl w-6"></i> <span
+                                        class="badge-count bg-pkg-15kw">x5</span></div>
+                                <div class="text-[0.65rem] text-gray-400">แอร์ 12,000 BTU</div>
+                            </td>
+                            <!-- 20kW -->
+                            <td class="p-4 align-top">
+                                <div class="appliance-item"><i class="fa-regular fa-lightbulb text-xl w-6"></i> <span
+                                        class="badge-count">x40</span></div>
+                                <div class="text-[0.65rem] text-gray-400 mb-2">หลอดไฟ 18 W</div>
+
+                                <div class="appliance-item"><i class="fa-solid fa-tv text-xl w-6"></i> <span
+                                        class="badge-count bg-pkg-20kw">x18</span></div>
+                                <div class="text-[0.65rem] text-gray-400 mb-2">TV LED 55 นิ้ว</div>
+
+                                <div class="appliance-item"><i class="fa-solid fa-box text-xl w-6"></i> <span
+                                        class="badge-count bg-pkg-20kw">x6</span></div>
+                                <div class="text-[0.65rem] text-gray-400 mb-2">ตู้เย็น 15 คิว</div>
+
+                                <div class="appliance-item"><i class="fa-solid fa-snowflake text-xl w-6"></i> <span
+                                        class="badge-count bg-pkg-20kw">x7</span></div>
+                                <div class="text-[0.65rem] text-gray-400">แอร์ 12,000 BTU</div>
+                            </td>
+                        </tr>
+
+                        <!-- ลดค่าไฟเฉลี่ย -->
+                        <tr class="mt-4">
+                            <td class="p-4 text-left font-semibold flex items-center gap-2">
+                                <div
+                                    class="w-6 h-6 rounded-full bg-green-500 text-white flex items-center justify-center text-xs">
+                                    <i class="fa-solid fa-check"></i>
+                                </div>
+                                <div>ลดค่าไฟเฉลี่ย<br><span class="text-xs text-gray-400 font-normal">(บาท/เดือน)</span>
+                                </div>
+                            </td>
+                            <td class="p-2">
+                                <div class="bg-pkg-3kw text-white font-bold py-3 rounded-md shadow-sm">1,500</div>
+                            </td>
+                            <td class="p-2">
+                                <div class="bg-pkg-5kw1 text-white font-bold py-3 rounded-md shadow-sm">2,500</div>
+                            </td>
+                            <td class="p-2">
+                                <div class="bg-pkg-5kw3 text-white font-bold py-3 rounded-md shadow-sm">2,500</div>
+                            </td>
+                            <td class="p-2">
+                                <div class="bg-pkg-10kw text-white font-bold py-3 rounded-md shadow-sm">5,000</div>
+                            </td>
+                            <td class="p-2">
+                                <div class="bg-pkg-15kw text-white font-bold py-3 rounded-md shadow-sm">7,500</div>
+                            </td>
+                            <td class="p-2">
+                                <div class="bg-pkg-20kw text-white font-bold py-3 rounded-md shadow-sm">10,000</div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-lbm-blue text-white py-8 border-t-4 border-lbm-yellow">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
+
+            <!-- Logo & Brand -->
+            <div class="flex items-center gap-4">
+                <div
+                    class="bg-white text-lbm-blue font-bold rounded-full w-12 h-12 flex items-center justify-center text-lg border-2 border-lbm-yellow">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+                <div>
+                    <h3 class="font-bold text-xl tracking-wider">LBM2S</h3>
+                    <p class="text-xs text-gray-300">LOPBURI METAVERSE & SUPPLY</p>
+                    <p class="text-[0.65rem] text-gray-400 mt-1"><i class="fa-brands fa-facebook"></i> <i
+                            class="fa-brands fa-line"></i> @LBM2S</p>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="bg-white/10 rounded-lg p-4 backdrop-blur-sm border border-white/10 w-full md:w-auto">
+                <h4 class="text-lbm-yellow font-bold mb-2 text-sm border-b border-white/20 pb-1">สนใจติดต่อ</h4>
+                <div class="flex flex-col sm:flex-row gap-4 sm:gap-8">
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-phone text-xl text-white"></i>
+                        <div>
+                            <p class="font-bold text-lg leading-none">088-214-5999</p>
+                            <p class="text-xs text-gray-300"><i class="fa-solid fa-user text-[10px]"></i> ชนะโชจฐ์</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-phone text-xl text-white"></i>
+                        <div>
+                            <p class="font-bold text-lg leading-none">096-694-6994</p>
+                            <p class="text-xs text-gray-300"><i class="fa-solid fa-user text-[10px]"></i> จิตวัฒน์</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>
